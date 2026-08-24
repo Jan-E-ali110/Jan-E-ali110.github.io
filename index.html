@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jan Ali is an AI Engineer building intelligent systems, custom RAG pipelines, and modern AI workflows." />
+  <title>Jan Ali | AI Engineer</title>
+
+  <!-- Tailwind provides utility classes while the custom stylesheet below handles the visual language. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --ink: #f3f5f0;
+      --muted: #9da6a0;
+      --paper: #111614;
+      --panel: #171d1a;
+      --line: rgba(220, 238, 224, 0.12);
+      --lime: #d5f56c;
+      --coral: #ff8066;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
+    .grid-paper {
+      background-image: linear-gradient(rgba(213,245,108,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(213,245,108,.045) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .noise { position: relative; }
+    .noise::after {
+      content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .035; z-index: 20;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+    }
+    .panel { background: rgba(23, 29, 26, .78); border: 1px solid var(--line); }
+    .eyebrow { color: var(--lime); letter-spacing: .18em; font-size: .7rem; font-weight: 700; text-transform: uppercase; }
+    .fade-up { animation: fadeUp .75s ease both; }
+    .delay-1 { animation-delay: .12s; } .delay-2 { animation-delay: .22s; } .delay-3 { animation-delay: .32s; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .project-card { transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+    .project-card:hover { transform: translateY(-5px); border-color: rgba(213,245,108,.45); background: #1b231f; }
+    .social-link { transition: color .2s ease, transform .2s ease; }
+    .social-link:hover { color: var(--lime); transform: translateY(-2px); }
+    .glow { box-shadow: 0 0 80px rgba(213,245,108,.08); }
+    ::selection { background: var(--lime); color: #101410; }
+  </style>
+</head>
+
+<body class="noise">
+  <header class="absolute inset-x-0 top-0 z-10">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-7 lg:px-8" aria-label="Primary navigation">
+      <a href="#top" class="display text-lg font-semibold tracking-tight">J<span class="text-[#d5f56c]">.</span>A</a>
+      <div class="hidden items-center gap-8 text-sm text-[#9da6a0] sm:flex">
+        <a class="transition hover:text-[#f3f5f0]" href="#about">About</a>
+        <a class="transition hover:text-[#f3f5f0]" href="#projects">Projects</a>
+        <a class="transition hover:text-[#f3f5f0]" href="#contact">Connect</a>
+      </div>
+      <a href="https://www.linkedin.com/in/jan-ali-a364022b7/" target="_blank" rel="noreferrer" class="flex items-center gap-2 text-sm font-semibold text-[#d5f56c] transition hover:text-white">
+        Available for work <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero: the positioning and primary actions are visible without requiring a scroll. -->
+    <section class="grid-paper relative flex min-h-[720px] items-center overflow-hidden px-6 pb-20 pt-32 lg:min-h-screen lg:px-8">
+      <div class="absolute -right-32 top-36 h-96 w-96 rounded-full border border-[#d5f56c]/10"></div>
+      <div class="absolute -right-12 top-48 h-64 w-64 rounded-full border border-[#ff8066]/10"></div>
+      <div class="mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.2fr_.8fr]">
+        <div>
+          <div class="eyebrow fade-up mb-7 flex items-center gap-3"><span class="h-px w-8 bg-[#d5f56c]"></span> AI Engineer / Pakistan</div>
+          <h1 class="display fade-up delay-1 max-w-4xl text-6xl font-semibold leading-[.95] tracking-[-.06em] sm:text-8xl lg:text-[8.5rem]">Ideas into<br /><span class="text-[#d5f56c]">intelligence.</span></h1>
+          <p class="fade-up delay-2 mt-8 max-w-xl text-lg leading-relaxed text-[#9da6a0]">Building intelligent systems, custom RAG pipelines, and modern AI workflows.</p>
+          <div class="fade-up delay-3 mt-10 flex flex-wrap gap-4">
+            <a href="#projects" class="inline-flex items-center gap-3 bg-[#d5f56c] px-5 py-3 text-sm font-bold text-[#101410] transition hover:bg-white">View projects <i data-lucide="arrow-down-right" class="h-4 w-4"></i></a>
+            <a href="#contact" class="inline-flex items-center gap-3 border border-[#dceee0]/20 px-5 py-3 text-sm font-bold transition hover:border-[#d5f56c] hover:text-[#d5f56c]">Contact me <i data-lucide="send" class="h-4 w-4"></i></a>
+          </div>
+        </div>
+        <div class="glow relative mx-auto w-full max-w-sm lg:ml-auto">
+          <div class="panel relative aspect-square p-6">
+            <div class="flex items-center justify-between border-b border-[#dceee0]/10 pb-4 text-xs text-[#9da6a0]"><span>CORE_SYSTEMS</span><span class="text-[#d5f56c]">● ONLINE</span></div>
+            <div class="flex h-[78%] items-center justify-center">
+              <div class="relative flex h-44 w-44 items-center justify-center rounded-full border border-[#d5f56c]/40">
+                <div class="absolute h-32 w-32 rounded-full border border-[#d5f56c]/30"></div><div class="absolute h-20 w-20 rounded-full bg-[#d5f56c]/10 shadow-[0_0_50px_rgba(213,245,108,.25)]"></div>
+                <span class="display z-10 text-4xl font-semibold text-[#d5f56c]">AI</span>
+              </div>
+            </div>
+            <div class="flex justify-between text-xs text-[#9da6a0]"><span>RAG / ML / LLM</span><span>v.2026</span></div>
+          </div>
+          <div class="absolute -bottom-5 -left-5 flex items-center gap-3 bg-[#ff8066] px-4 py-3 text-xs font-bold text-[#191311]"><i data-lucide="sparkles" class="h-4 w-4"></i> Always learning</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="border-t border-[#dceee0]/10 px-6 py-24 lg:px-8 lg:py-32">
+      <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[.7fr_1.3fr]">
+        <div><p class="eyebrow">01 / About me</p><p class="mt-5 text-sm text-[#9da6a0]">A builder's perspective on better software.</p></div>
+        <div><h2 class="display max-w-3xl text-3xl font-medium leading-tight tracking-[-.04em] sm:text-5xl">I work where <span class="text-[#d5f56c]">curiosity</span> meets useful technology.</h2><p class="mt-8 max-w-2xl text-lg leading-relaxed text-[#9da6a0]">I am Jan-e-Ali, an AI Engineer focused on Modern AI Engineering, Machine Learning, and solving complex problems with thoughtful systems. From retrieval pipelines to model-powered products, I turn ambiguous ideas into dependable tools.</p><div class="mt-10 grid max-w-xl grid-cols-2 gap-8 border-t border-[#dceee0]/10 pt-6 sm:grid-cols-3"><div><p class="display text-3xl font-semibold text-[#f3f5f0]">03+</p><p class="mt-1 text-xs text-[#9da6a0]">Years exploring AI</p></div><div><p class="display text-3xl font-semibold text-[#f3f5f0]">∞</p><p class="mt-1 text-xs text-[#9da6a0]">Questions asked</p></div><div><p class="display text-3xl font-semibold text-[#f3f5f0]">24/7</p><p class="mt-1 text-xs text-[#9da6a0]">Builder mindset</p></div></div></div>
+      </div>
+    </section>
+
+    <section id="projects" class="grid-paper border-y border-[#dceee0]/10 px-6 py-24 lg:px-8 lg:py-32">
+      <div class="mx-auto max-w-6xl"><div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p class="eyebrow">02 / Selected work</p><h2 class="display mt-4 text-4xl font-medium tracking-[-.04em] sm:text-6xl">Built in public.</h2></div><a href="https://github.com/Jan-E-ali110" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-[#d5f56c] hover:text-white">See all on GitHub <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a></div>
+        <div id="project-grid" class="mt-14 grid gap-4 md:grid-cols-2"><div class="panel p-6 text-sm text-[#9da6a0]">Loading repositories...</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="px-6 pb-8 pt-24 lg:px-8 lg:pt-32">
+    <div class="mx-auto max-w-6xl"><div class="grid gap-12 border-b border-[#dceee0]/10 pb-20 lg:grid-cols-[1fr_auto] lg:items-end"><div><p class="eyebrow">03 / Connect</p><h2 class="display mt-5 max-w-2xl text-5xl font-medium leading-none tracking-[-.05em] sm:text-7xl">Let's make something <span class="text-[#ff8066]">intelligent.</span></h2></div><a href="https://www.linkedin.com/in/jan-ali-a364022b7/" target="_blank" rel="noreferrer" class="inline-flex w-fit items-center gap-3 bg-[#d5f56c] px-5 py-3 text-sm font-bold text-[#101410] transition hover:bg-white">Start a conversation <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a></div><div class="flex flex-col justify-between gap-6 py-8 text-sm text-[#9da6a0] sm:flex-row"><p>© 2026 Jan-e-Ali. Built with intent.</p><div class="flex flex-wrap gap-6"><a class="social-link inline-flex items-center gap-2" href="https://www.linkedin.com/in/jan-ali-a364022b7/" target="_blank" rel="noreferrer"><i data-lucide="linkedin" class="h-4 w-4"></i> LinkedIn</a><a class="social-link inline-flex items-center gap-2" href="https://huggingface.co/janali01" target="_blank" rel="noreferrer"><i data-lucide="brain-circuit" class="h-4 w-4"></i> HuggingFace</a><a class="social-link inline-flex items-center gap-2" href="https://github.com/Jan-E-ali110" target="_blank" rel="noreferrer"><i data-lucide="github" class="h-4 w-4"></i> GitHub</a><a class="social-link inline-flex items-center gap-2" href="https://www.instagram.com/ijane_ali/" target="_blank" rel="noreferrer"><i data-lucide="instagram" class="h-4 w-4"></i> Instagram</a><a class="social-link inline-flex items-center gap-2" href="https://www.facebook.com/janeali.jagirani.5" target="_blank" rel="noreferrer"><i data-lucide="facebook" class="h-4 w-4"></i> Facebook</a></div></div></div>
+  </footer>
+
+  <script>
+    // Fallback content keeps the project section useful when GitHub is rate-limited or offline.
+    const fallbackProjects = [
+      { name: 'RAG Knowledge Assistant', description: 'A retrieval-augmented assistant for grounded, source-aware answers.', html_url: 'https://github.com/Jan-E-ali110' },
+      { name: 'AI Engineering Experiments', description: 'A growing lab of practical machine learning and LLM workflows.', html_url: 'https://github.com/Jan-E-ali110' },
+      { name: 'Intelligent Automation', description: 'Small tools that turn repetitive work into reliable AI-powered flows.', html_url: 'https://github.com/Jan-E-ali110' }
+    ];
+
+    function renderProjects(projects) {
+      const grid = document.querySelector('#project-grid');
+      grid.innerHTML = projects.slice(0, 6).map((project, index) => `
+        <article class="project-card panel group flex min-h-[220px] flex-col justify-between p-6 sm:p-8">
+          <div class="flex items-start justify-between"><span class="font-mono text-xs text-[#ff8066]">0${index + 1}</span><a aria-label="View ${project.name} on GitHub" href="${project.html_url}" target="_blank" rel="noreferrer" class="text-[#9da6a0] transition group-hover:text-[#d5f56c]"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></a></div>
+          <div><h3 class="display mt-10 text-2xl font-medium">${project.name}</h3><p class="mt-3 max-w-md text-sm leading-relaxed text-[#9da6a0]">${project.description || 'An experiment in building useful, intelligent systems.'}</p></div>
+        </article>`).join('');
+      lucide.createIcons();
+    }
+
+    async function loadProjects() {
+      try {
+        const response = await fetch('https://api.github.com/users/Jan-E-ali110/repos?sort=updated&per_page=6');
+        if (!response.ok) throw new Error('GitHub API unavailable');
+        const repositories = await response.json();
+        renderProjects(repositories.length ? repositories : fallbackProjects);
+      } catch (error) {
+        renderProjects(fallbackProjects);
+      }
+    }
+
+    lucide.createIcons();
+    loadProjects();
+  </script>
+</body>
+</html>
